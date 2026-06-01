@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bursary Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f6fb;
+            color: #2d3a4b;
+        }
+        header {
+            background-color: #0d47a1;
+            color: #ffffff;
+            padding: 20px 40px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #0d47a1;
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+        .button:hover {
+            background-color: #0b3a85;
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            color: #6c7a89;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bursary Home</h1>
+        <nav>
+            <a href="#overview">Overview</a>
+            <a href="#apply">Apply</a>
+            <a href="#support">Support</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="overview" class="card">
+            <h2>Welcome to the Bursary Portal</h2>
+            <p>Use this page to access bursary information, submit applications, and find support resources. Our goal is to help students secure funding for their education.</p>
+        </section>
+
+        <section class="grid">
+            <article class="card">
+                <h2>Latest Announcements</h2>
+                <p>Check the latest bursary deadlines, eligibility updates, and new funding opportunities. Stay informed to avoid missing important dates.</p>
+            </article>
+            <article class="card">
+                <h2>Application Status</h2>
+                <p>Track your current application progress and view any required documents or follow-up steps needed from your side.</p>
+            </article>
+            <article class="card">
+                <h2>Support Resources</h2>
+                <p>Find contact details, frequently asked questions, and guidance on how to complete your bursary application successfully.</p>
+            </article>
+        </section>
+
+        <section id="apply" class="card">
+            <h2>Apply for a Bursary</h2>
+            <p>Ready to apply? Start your bursary application now and upload all required supporting documents.</p>
+            <a class="button" href="#">Start Application</a>
+        </section>
+
+        <section id="support" class="card">
+            <h2>Need Help?</h2>
+            <p>If you need assistance with the bursary process, contact our support team or review the help guides available on this portal.</p>
+            <a class="button" href="#">Contact Support</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Bursary Home. All rights reserved.</p>
+    </footer>
+</body>
+</html>
