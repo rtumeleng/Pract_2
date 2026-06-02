@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registered Users</title>
+
+    <link rel="stylesheet" href="css/styling.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="form-card">
+
+            <h1>Registered Users</h1>
+
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+
+                <tbody id="usersTable"></tbody>
+            </table>
+        <div class="button-group">
+            <button type="button" onclick="window.location.href='SignUp.html'">
+                Sign Up
+            </button>
+
+        </div>
+        </div>
+
+    </div>
+
+    <script src="script/index.js"></script>
+
+    <script>
+
+        function loadUsers() {
+
+            let users =
+                JSON.parse(
+                    localStorage.getItem("users")
+                ) || [];
+
+            let output = "";
+
+            users.forEach(user => {
+
+                output += `
+                    <tr>
+                        <td>${user.name}</td>
+                        <td>${user.surname}</td>
+                        <td>${user.email}</td>
+                    </tr>
+                `;
+            });
+
+            document.getElementById("usersTable")
+                .innerHTML = output;
+        }
+
+        loadUsers();
+
+    </script>
+
+</body>
+</html>

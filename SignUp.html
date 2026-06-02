@@ -52,18 +52,23 @@
         >
         <br><br>
 
-        <label for="body">Biography</label><br>
+        <!-- <label for="body">Biography</label><br> 
         <textarea
             id="body"
             required
             minlength="10"
             maxlength="200"
         ></textarea>
-        <br><br>
+        <br><br>-->
 
-        <button type="submit">
-            Sign Up
+        <div class="button-group">
+            <button type="submit">
+                Sign Up
+            </button>
+            <button type="button" onclick="window.location.href='Index.html'">
+            Home
         </button>
+        </div>
 
     </form>
     </div>
@@ -94,8 +99,8 @@
             const confirmEmail =
                 document.getElementById("confirmEmail").value.trim();
 
-            const body =
-                document.getElementById("body").value.trim();
+            //const body =
+            //    document.getElementById("body").value.trim();
 
             // Name Validation
             if(name.length < 2){
@@ -116,10 +121,10 @@
             }
 
             // Biography Validation
-            if(body.length < 10){
-                alert("Biography must contain at least 10 characters.");
-                return;
-            }
+            //if(body.length < 10){
+            //    alert("Biography must contain at least 10 characters.");
+            //    return;
+            //}
 
             try {
 
@@ -133,8 +138,8 @@
                         body: JSON.stringify({
                             name: name,
                             surname: surname,
-                            email: email,
-                            biography: body
+                            email: email
+                            //biography: body
                         })
                     }
                 );
